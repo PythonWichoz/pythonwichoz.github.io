@@ -1,0 +1,1224 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluación Educativa | Portafolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --green: #187845;
+    --gold: #DB9937;
+    --dark: #173C2B;
+    --light: #F5F8F5;
+    --white: #FFFFFF;
+    --text: #34463B;
+    --muted: #829087;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+}
+
+/* NAVEGACIÓN */
+
+header {
+    background: rgba(255,255,255,.97);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e8eee9;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* PORTADA */
+
+.hero {
+    background-color: var(--green);
+    background-image:
+        linear-gradient(rgba(15, 55, 35, .60), rgba(15, 55, 35, .60)),
+        url("img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* IMAGEN GRANDE A LA DERECHA */
+
+.hero-logo {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: cover;
+    object-position: center;
+    opacity: .30;
+    filter: brightness(1.50);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 85px 30px;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: #F2C77D;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    max-width: 700px;
+    line-height: 1.13;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #E6B45E;
+}
+
+.hero-line {
+    width: 65px;
+    height: 4px;
+    background: var(--gold);
+    margin-bottom: 30px;
+}
+
+/* SECCIONES GENERALES */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 30px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark);
+    font-size: 37px;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 650px;
+    font-size: 15px;
+}
+
+/* INTRODUCCIÓN */
+
+.intro {
+    background: white;
+}
+
+.intro-content {
+    max-width: 760px;
+}
+
+.intro-content p {
+    font-size: 16px;
+    line-height: 2;
+    color: #68766D;
+}
+
+/* EQUIPO */
+
+.team {
+    background: var(--light);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 38px;
+}
+
+.team-card {
+    background: white;
+    border: 1px solid #E9EEE9;
+    border-radius: 14px;
+    padding: 30px 22px;
+    text-align: center;
+    transition: .3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(24,120,69,.08);
+}
+
+.team-card h3 {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.4;
+    min-height: 54px;
+    margin-bottom: 22px;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 190px;
+    height: 210px;
+    margin: 0 auto;
+    border: 2px dashed #C5D9CA;
+    border-radius: 10px;
+    background: #F5F8F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* UNIDADES */
+
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.unit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid #E9EEE9;
+    transition: .3s;
+}
+
+.unit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(24,120,69,.08);
+    border-color: #C5D9CA;
+}
+
+.unit-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+.unit-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.unit-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.unit-link {
+    display: inline-block;
+    margin-top: 23px;
+    color: var(--green);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.unit-link:hover {
+    color: var(--gold);
+}
+
+/* EVIDENCIAS */
+
+.evidence {
+    background: white;
+}
+
+.evidence-box {
+    background: var(--light);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+    border-left: 4px solid var(--gold);
+}
+
+.evidence-box h3 {
+    color: var(--green);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.evidence-box p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* VISOR PDF */
+
+.pdf-evidence {
+    margin-top: 30px;
+    background: white;
+    border: 1px solid #E5ECE6;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(23, 60, 43, .05);
+}
+
+.pdf-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 20px 24px;
+    border-bottom: 1px solid #E9EEE9;
+}
+
+.pdf-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.pdf-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    background: #FBEDEC;
+    color: #B94A48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pdf-info h3 {
+    color: var(--green);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.pdf-info p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.pdf-download {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.pdf-download:hover {
+    background: var(--dark);
+    transform: translateY(-2px);
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 680px;
+    background: #EEF2EE;
+}
+
+.pdf-viewer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* GRÁFICAS */
+
+.charts-section {
+    margin-top: 45px;
+}
+
+.charts-heading {
+    margin-bottom: 25px;
+}
+
+.charts-heading h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+.charts-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.chart-card {
+    background: white;
+    border: 1px solid #E5ECE6;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(24,120,69,.08);
+}
+
+.chart-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    padding: 12px;
+    background: #F5F8F5;
+}
+
+.chart-caption {
+    padding: 15px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    border-top: 1px solid #E9EEE9;
+}
+
+/* REFLEXIÓN FINAL */
+
+.reflection {
+    background: var(--green);
+    color: white;
+    text-align: center;
+}
+
+.reflection .section-title {
+    color: white;
+}
+
+.reflection .section-label {
+    color: #F2C77D;
+}
+
+.reflection .section-description {
+    color: #DCEBE1;
+    margin: auto;
+}
+
+.reflection-mark {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #123D29;
+    color: #DCEBE1;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* LISTAS DE COTEJO - UNIDAD II */
+
+.checklist-content {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 220px;
+}
+
+.checklist-content h3 {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+}
+
+.checklist-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.checklist-content .pdf-download {
+    margin-top: auto;
+}
+
+/* CELULARES */
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .units-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-content {
+        padding: 75px 22px;
+    }
+
+    /* IMAGEN GRANDE RECORTADA EN CELULAR */
+
+    .hero-logo {
+        width: 420px;
+        height: 420px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        object-fit: cover;
+        object-position: center;
+        opacity: .22;
+    }
+
+    .container {
+        padding: 65px 22px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .pdf-header {
+        padding: 17px;
+        align-items: flex-start;
+    }
+
+    .pdf-download {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pdf-viewer {
+        height: 520px;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-card img {
+        height: auto;
+        max-height: 350px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ SUPERIOR -->
+
+<header>
+<nav>
+
+<div class="logo">
+    <a href="index.html" title="Volver al inicio">
+        <img src="img/logo.png" alt="Logo institucional">
+    </a>
+</div>
+
+<ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#introduccion">Introducción</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#unidades">Unidades</a></li>
+    <li><a href="#unidad1-evidencias">Unidad I</a></li>
+    <li><a href="#unidad2-evidencias">Unidad II</a></li>
+    <li><a href="#unidad3-evidencias">Unidad III</a></li>
+    <li><a href="#unidad4-evidencias">Unidad IV</a></li>
+    <li><a href="#reflexion">Reflexión</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+
+    <img class="hero-logo"
+         src="img/imagen-portada.png"
+         alt="Imagen decorativa de portada">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="eyebrow">Portafolio · 2026-2</div>
+
+            <div class="hero-line"></div>
+
+            <h1>Evaluación <span>Educativa</span></h1>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- INTRODUCCIÓN -->
+
+<section class="intro" id="introduccion">
+    <div class="container intro-content">
+
+        <div class="section-label">01 · Presentación</div>
+
+        <h2 class="section-title">Introducción</h2>
+
+        <p>
+            Reunimos las actividades y evidencias realizadas
+            durante la materia de Evaluación Educativa / impartida por
+            la Dra. Icela López Gaspar. A través de cuatro unidades, aquí
+            nosotros presentamos los aprendizajes y conocimientos adquiridos
+            a lo largo de la materia mediante evidencias.
+        </p>
+
+    </div>
+</section>
+
+<!-- EQUIPO -->
+
+<section class="team" id="equipo">
+    <div class="container">
+
+        <div class="section-label">02 · Integrantes</div>
+        <h2 class="section-title">Nuestro equipo</h2>
+
+        <p class="section-description">
+            Integrantes de este portafolio.
+        </p>
+
+        <div class="team-grid">
+
+            <article class="team-card">
+                <h3>Luis Enrique Camacho Gutierrez</h3>
+                <div class="team-photo">
+                    <span>Foto orita la pongo</span>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <h3>Andres Alonso Acotto</h3>
+                <div class="team-photo">
+                    <span>fotiyo</span>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <h3>Gael Yahir Ibarra Sanchez</h3>
+                <div class="team-photo">
+                    <span>Fotiyo</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- UNIDADES DE APRENDIZAJE -->
+
+<section class="container" id="unidades">
+
+    <div class="section-label">03 · Contenido de la Unidad</div>
+    <h2 class="section-title">Unidades de aprendizaje</h2>
+
+    <p class="section-description">
+        Cada unidad reúne las actividades desarrolladas en clase / fuera de clase.
+    </p>
+
+    <div class="units-grid">
+
+        <article class="unit-card">
+            <div class="unit-number">01</div>
+            <h3>Unidad I</h3>
+            <p>Aqui voy a poner el nombre de la unidad.</p>
+            <a href="#unidad1-evidencias" class="unit-link">Ver evidencias →</a>
+        </article>
+
+        <article class="unit-card">
+            <div class="unit-number">02</div>
+            <h3>Unidad II</h3>
+            <p>Tmb</p>
+            <a href="#unidad2-evidencias" class="unit-link">Ver evidencias →</a>
+        </article>
+
+        <article class="unit-card">
+            <div class="unit-number">03</div>
+            <h3>Unidad III</h3>
+            <p>TMB</p>
+            <a href="#unidad3-evidencias" class="unit-link">Ver evidencias →</a>
+        </article>
+
+        <article class="unit-card">
+            <div class="unit-number">04</div>
+            <h3>Unidad IV</h3>
+            <p>TMB</p>
+            <a href="#unidad4-evidencias" class="unit-link">Ver evidencias →</a>
+        </article>
+
+    </div>
+</section>
+
+<!-- UNIDAD I -->
+
+<section class="evidence" id="unidad1-evidencias">
+    <div class="container">
+
+        <div class="section-label">04 · Evidencias</div>
+        <h2 class="section-title">Unidad I</h2>
+
+        <div class="pdf-evidence">
+
+            <div class="pdf-header">
+
+                <div class="pdf-info">
+                    <div class="pdf-icon">PDF</div>
+
+                    <div>
+                        <h3>Presentación de la Unidad I</h3>
+                        <p>Evaluación del aprendizaje.</p>
+                    </div>
+                </div>
+
+                <a class="pdf-download"
+                   href="documentos/unidad1.pdf"
+                   download>
+                    Descargar PDF ↓
+                </a>
+
+            </div>
+
+            <div class="pdf-viewer">
+                <iframe
+                    src="documentos/unidad1.pdf"
+                    title="Vista previa del documento de la Unidad I">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- TRES GRÁFICAS -->
+
+        <div class="charts-section">
+
+            <div class="charts-heading">
+                <h3>C</h3>
+                <p>
+                    C eso orita le muevo
+                </p>
+            </div>
+
+            <div class="charts-grid">
+
+                <div class="chart-card">
+                    <img
+                        src="documentos/char1.png"
+                        alt="Gráfica 1 de la Unidad I">
+                    <div class="chart-caption">Chartsito 1</div>
+                </div>
+
+                <div class="chart-card">
+                    <img
+                        src="documentos/chart2.png"
+                        alt="Gráfica 2 de la Unidad I">
+                    <div class="chart-caption">chartsito 2</div>
+                </div>
+
+                <div class="chart-card">
+                    <img
+                        src="documentos/chart3.png"
+                        alt="Gráfica 3 de la Unidad I">
+                    <div class="chart-caption">chartsito 3 del pelon rico tatuado</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- UNIDAD II -->
+
+<section class="container" id="unidad2-evidencias">
+
+    <div class="section-label">05 · Evidencias</div>
+    <h2 class="section-title">Unidad II</h2>
+
+    <div class="evidence-box">
+        <h3>nombre d la unidad</h3>
+        <p>
+            info adisional pa agregar
+        </p>
+    </div>
+
+    <!-- DOCUMENTO PDF -->
+
+    <div class="pdf-evidence">
+
+        <div class="pdf-header">
+
+            <div class="pdf-info">
+                <div class="pdf-icon">PDF</div>
+
+                <div>
+                    <h3>Chart ya bn digital Unidad II</h3>
+                    <p>Documento</p>
+                </div>
+            </div>
+
+            <a class="pdf-download"
+               href="documentos/chartpreguntas.pdf"
+               download>
+                Descargar PDF ↓
+            </a>
+
+        </div>
+
+        <div class="pdf-viewer">
+            <iframe
+                src="documentos/chartpreguntas.pdf"
+                title="Vista previa de las preguntas de la Unidad II">
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- LISTAS DE COTEJO -->
+
+    <div class="charts-section">
+
+        <div class="charts-heading">
+            <h3>Listas de cotejo</h3>
+            <p>
+                listas de Writing
+            </p>
+        </div>
+
+        <div class="charts-grid">
+
+            <div class="chart-card">
+                <div class="checklist-content">
+                    <div class="pdf-icon">PDF</div>
+                    <h3>documento pa evaluar1</h3>
+                    <p>Writing Rubrica</p>
+
+                    <a class="pdf-download"
+                       href="documentos/lista-cotejo1.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="checklist-content">
+                    <div class="pdf-icon">PDF</div>
+                    <h3>documento pa evaluar2</h3>
+                    <p>Wriitng rubrica</p>
+
+                    <a class="pdf-download"
+                       href="documentos/lista-cotejo2.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="checklist-content">
+                    <div class="pdf-icon">PDF</div>
+                    <h3>documento pa evaluar 3</h3>
+                    <p>Writing rubrica.</p>
+
+                    <a class="pdf-download"
+                       href="documentos/lista-cotejo3.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- UNIDAD III -->
+
+<section class="evidence" id="unidad3-evidencias">
+    <div class="container">
+
+        <div class="section-label">06 · Evidencias</div>
+        <h2 class="section-title">Unidad III</h2>
+
+        <div class="evidence-box">
+            <h3>Actividades y trabajos</h3>
+            <p>
+                Tmb luego veo k le pongo
+            </p>
+        </div>
+
+        <!-- LUIS ENRIQUE -->
+
+        <div class="charts-section">
+
+            <div class="charts-heading">
+                <h3>Luis Enrique Camacho Gutierrez</h3>
+                <p>Documentos / evidencias.</p>
+            </div>
+
+            <div class="pdf-evidence">
+                <div class="pdf-header">
+                    <div class="pdf-info">
+                        <div class="pdf-icon">PDF</div>
+                        <div>
+                            <h3>Documento 1</h3>
+                            <p>Primera evidencia.</p>
+                        </div>
+                    </div>
+
+                    <a class="pdf-download"
+                       href="documentos/luis-enrique-1.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe
+                        src="documentos/luis-enrique-1.pdf"
+                        title="Documento 1 de Luis Enrique">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pdf-evidence">
+                <div class="pdf-header">
+                    <div class="pdf-info">
+                        <div class="pdf-icon">PDF</div>
+                        <div>
+                            <h3>Documento 2</h3>
+                            <p>Segunda evidencia.</p>
+                        </div>
+                    </div>
+
+                    <a class="pdf-download"
+                       href="documentos/luis-enrique-2.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe
+                        src="documentos/luis-enrique-2.pdf"
+                        title="Documento 2 de Luis Enrique">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ANDRES ALONSO -->
+
+        <div class="charts-section">
+
+            <div class="charts-heading">
+                <h3>Andres Alonso Acotto</h3>
+                <p>Documentos / evidencias.</p>
+            </div>
+
+            <div class="pdf-evidence">
+                <div class="pdf-header">
+                    <div class="pdf-info">
+                        <div class="pdf-icon">PDF</div>
+                        <div>
+                            <h3>Documento 1</h3>
+                            <p>Primera evidencia.</p>
+                        </div>
+                    </div>
+
+                    <a class="pdf-download"
+                       href="documentos/andres-alonso-1.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe
+                        src="documentos/andres-alonso-1.pdf"
+                        title="Documento 1 de Andres Alonso">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pdf-evidence">
+                <div class="pdf-header">
+                    <div class="pdf-info">
+                        <div class="pdf-icon">PDF</div>
+                        <div>
+                            <h3>Documento 2</h3>
+                            <p>Segunda evidencia.</p>
+                        </div>
+                    </div>
+
+                    <a class="pdf-download"
+                       href="documentos/andres-alonso-2.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe
+                        src="documentos/andres-alonso-2.pdf"
+                        title="Documento 2 de Andres Alonso">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- GAEL YAHIR -->
+
+        <div class="charts-section">
+
+            <div class="charts-heading">
+                <h3>Gael Yahir Ibarra Sanchez</h3>
+                <p>Documentos / evidencias.</p>
+            </div>
+
+            <div class="pdf-evidence">
+                <div class="pdf-header">
+                    <div class="pdf-info">
+                        <div class="pdf-icon">PDF</div>
+                        <div>
+                            <h3>Documento 1</h3>
+                            <p>Primera evidencia.</p>
+                        </div>
+                    </div>
+
+                    <a class="pdf-download"
+                       href="documentos/gael-yahir-1.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe
+                        src="documentos/gael-yahir-1.pdf"
+                        title="Documento 1 de Gael Yahir">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="pdf-evidence">
+                <div class="pdf-header">
+                    <div class="pdf-info">
+                        <div class="pdf-icon">PDF</div>
+                        <div>
+                            <h3>Documento 2</h3>
+                            <p>Segunda evidencia.</p>
+                        </div>
+                    </div>
+
+                    <a class="pdf-download"
+                       href="documentos/gael-yahir-2.pdf"
+                       download>
+                        Descargar PDF ↓
+                    </a>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe
+                        src="documentos/gael-yahir-2.pdf"
+                        title="Documento 2 de Gael Yahir">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- UNIDAD IV -->
+
+<section class="container" id="unidad4-evidencias">
+
+    <div class="section-label">07 · Evidencias</div>
+    <h2 class="section-title">Unidad IV</h2>
+
+    <div class="evidence-box">
+        <h3>Actividades y trabajos</h3>
+        <p>
+            lo mismo
+        </p>
+    </div>
+
+</section>
+
+<!-- REFLEXIÓN FINAL -->
+
+<section class="reflection" id="reflexion">
+    <div class="container">
+
+        <div class="reflection-mark">“</div>
+
+        <div class="section-label">08 · Cierre</div>
+
+        <h2 class="section-title">Reflexión final</h2>
+
+        <p class="section-description">
+            Este portafolio representa una recopilación de los conocimientos,
+            experiencias y aprendizajes obtenidos durante la materia.
+            Cada actividad contribuyó a comprender la importancia de la
+            evaluación dentro del proceso educativo y su papel en la
+            mejora de la enseñanza y el aprendizaje.
+        </p>
+
+    </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+    <p><span>Evaluación Educativa</span> · Portafolio académico</p>
+    <p>Dra. Icela López Gaspar · 2026</p>
+    <p>Página web creada desde cero mediante código propio en HTML y CSS.</p>
+</footer>
+
+</body>
+</html>
